@@ -1,6 +1,6 @@
+import { LoginUserParams } from "<leitel>/types";
+import { InputErros } from "<leitel>/types/error";
 import { signIn } from "next-auth/react";
-import {LoginUserParams} from "../../types";
-import InputErros from "../../types/error";
 
 export const getErrorMsg = (key: string, errors: InputErros[]) => {
     if(errors.find(err => err.hasOwnProperty(key) !== undefined)) {

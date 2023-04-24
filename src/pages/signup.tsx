@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Close from '../components/Button/close'
 import SignupForm from '../components/Form/SignupForm'
+import Link from 'next/link'
 
 const signup = () => {
     return (
@@ -15,9 +16,9 @@ const signup = () => {
                     height={100}
                     className='hidden md:block rounded-xl'
                 />
-                <a href="/">
+                <Link href="/">
                     <Close />
-                </a>
+                </Link>
             </div>
         </div>
     )

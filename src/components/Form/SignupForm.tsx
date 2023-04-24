@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import InputErrors from '../../../types/error'
 import { getErrorMsg, loginUser } from '../../helpers'
 import Button from '../Button'
 import { useRouter } from 'next/router'
 import axios, { AxiosError } from 'axios'
+import { InputErros } from '<leitel>/types/error'
 
 const SignupForm = () => {
   const [data, setData] = useState({
@@ -13,7 +13,7 @@ const SignupForm = () => {
     confirmPassword: ""
   })
 
-  const [validationErrors, setValidationErrors] = useState<InputErrors[]>([])
+  const [validationErrors, setValidationErrors] = useState<InputErros[]>([])
   const [submitError, setSubmitError] = useState<string>("")
   const [loading, setLoading] = useState(false)
   const router = useRouter()

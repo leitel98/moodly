@@ -4,7 +4,7 @@ import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { connectToMongoDB } from '../../../lib/mongodb'
 import User from '../../../models/user'
-import { IUser } from '../../../../types'
+import { IUser } from '<leitel>/types'
 
 const {GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET} = process.env
 

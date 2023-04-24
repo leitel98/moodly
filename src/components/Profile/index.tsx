@@ -9,12 +9,12 @@ const UserProfile = () => {
 
   console.log(session, "in profile comp")
 
-  const handleDelete = async (email) => {
+  const handleDelete = async (email:string) => {
     try {
       const response = await axios.delete(`http://localhost:3000/api/auth/rest?email=${email}`);
       console.log(response.data);
       signOut(); // or redirect to homepage after delete
-    } catch (error) {
+    } catch (error : any) {
       console.error(error.response.data);
     }
   };
