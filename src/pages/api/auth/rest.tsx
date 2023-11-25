@@ -24,6 +24,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           });
         }
 
+        // deepcode ignore HardcodedSecret: <please specify a reason of ignoring this>
         const hashedPassword = await hash(password, 12);
 
         const newUser = new User({
